@@ -1,0 +1,167 @@
+/* by Zhong Hongzhen */
+/* For skeleton.html */
+
+body {
+  background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/background.png?version=1&modificationDate=1268896312000);
+  font-size: 8pt;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 0px 0px 0px 0px;
+
+}
+
+#bar {
+  text-align: center;
+  position: relative;
+  /*top: -8px;*/
+  width: 100%;
+  background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png?version=1&modificationDate=1268896312000);
+  background-repeat: repeat-x;
+}
+
+#title {
+  font-size: 24pt;
+  text-align: center;
+  font-weight: bold;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+#content {
+  position: relative;
+  border: 4px gray solid;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#left {
+  width: 550px;
+}
+
+#left_heading {
+  height: 83px;
+  background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000);
+  background-repeat: repeat-x;
+}
+
+#left_heading > #percent {
+  font-size: 48pt;
+  font-weight: bold;
+  color: red;
+  vertical-align: text-bottom;
+}
+
+#left_heading > #number {
+  font: 8pt;
+  color: white;
+  vertical-align: 93%;
+}
+
+#reviews_left_all {
+  max-width: 50%;
+  margin-top: 2%;
+  float: left;
+}
+
+#reviews_right_all {
+  max-width: 50%;
+  margin-top: 2%;
+  float: right;
+}
+
+.reviews_left_block, .reviews_right_block {
+ margin: 0% 1% 3em 2%;
+}
+
+/*
+#reviews_left_third > img, #reviews_left_third > q {
+  position: relative;
+  top: -5px;
+}
+*/
+.reviews_left_content, .reviews_right_content {
+  margin: 2%;
+  font-weight: bold;
+  border: gray solid;
+  border-width: 2px 2px 2px 2px;
+  padding: 8pt 8pt 8pt 8pt;
+  background-color: #E1D697;
+}
+
+.reviews_left_content {
+  margin-right: 0%;
+  word-break: keep-all;
+  overflow: hidden;
+}
+
+.reviews_right_content {
+  margin-left: 0%;
+  word-break:keep-all;
+}
+
+.reviews_left_content > img, .reviews_right_content > img {
+  float: left;
+  margin-right: 5px;
+  padding: 0px 0px 0px 0px;
+}
+
+.reviews_left_name, .reviews_right_name {
+  position: relative;
+  right: -2%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.reviews_left_name > img, .reviews_right_name > img {
+  float: left;
+}
+
+
+
+#right {
+  float: right;
+  width: 250px;
+}
+
+
+
+#right_text {
+  background-color: #A2B964;
+  font-size: 8pt;
+  margin: 0px 0px 0px 0px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  top: -15px;
+  height: 100%;
+}
+
+.right_text_block {
+  padding: 1em 1em 1em 1em;
+}
+
+#right_text > dl {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.right_text_block > dt {
+  font-weight: bold;
+}
+
+#bottom_bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  background-color: #A2B964;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+#W3C {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+}
