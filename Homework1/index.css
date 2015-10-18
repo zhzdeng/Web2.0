@@ -1,0 +1,11 @@
+body {
+  font-family: Georgia, Garamond, sans-serif;
+  background-color: yellow;
+}
+div {
+  text-align: center;
+}
+h1,p {
+  text-align: center;
+  font-size: 30pt;
+}
