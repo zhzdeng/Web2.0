@@ -1,0 +1,39 @@
+/* by Zhong Hongzhen */
+/* For pie.html */
+body {
+  font-family: Georgia, Garamond, sans-serif;
+  font-size: 11pt;
+  color: rgb(64, 64, 64);
+  background-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg);
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  color: rgb(164, 164, 0);
+  background-color: rgb(240, 240, 240);
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: "Century Gothic", Futura, Verdana, sans-serif;
+  letter-spacing: 0.2em;
+}
+h2 {
+  color: rgb(164, 164, 0);
+  background-color: rgb(240, 240, 240);
+  text-decoration: underline;
+  text-align: left;
+  font-weight: normal;
+  font-size: 18pt;
+  font-family: "Century Gothic", Futura,Verdana, sans-serif;
+  letter-spacing: 0.2em;
+}
+a {
+  color: rgb(164, 164, 0);
+}
+blockquote {
+  font-style: italic;
+  background-color: rgb(255, 255, 200);
+  text-align: left;
+}
+ul {
+  list-style-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif);
+}
