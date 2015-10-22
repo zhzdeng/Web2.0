@@ -1,11 +1,5 @@
 /* by Zhong Hongzhen */
 
-#test {
-  position: absolute;
-  right: 28.1%;
-  bottom: -6%;
-}
-
 /* at-plus-white */
 .icon {
   background-color: rgba(48, 63, 159, 0.5);
@@ -59,15 +53,15 @@
 .apb:hover .after-icon {
   visibility: visible;
 
-  /* 扩大两倍 */
+  /* æ‰©å¤§ä¸¤å€ */
   transform: scale(2);
 }
 
 
 
-/* 大图标出现 */
+/* å¤§å›¾æ ‡å‡ºçŽ° */
 .apb:hover ~ #info-bar > .info {
-  background-color: rgba(48, 63, 159, 0.3);
+  background-color: #666666;
   width: 128px;
   height: 128px;
 
@@ -75,15 +69,14 @@
   right: 45.7%;
   bottom: 16%;
 
-  /* 出现 */
+  /* å‡ºçŽ° */
   opacity: 1;
 }
 
-/* 大图标默认属性 */
+/* å¤§å›¾æ ‡é»˜è®¤å±žæ€§ */
 .info {
   border-radius: 50%;
 
-  background-color: rgba(48, 63, 159, 1);
   position: absolute;
   width: 25px;
   height: 25px;
@@ -96,21 +89,22 @@
   -moz-transition: all 1s linear;
 
   opacity: 0;
+  overflow: hidden;
 }
 
-/* 去列表的黑点 */
+/* åŽ»åˆ—è¡¨çš„é»‘ç‚¹ */
 .info ul {
   list-style:none;
 }
 
-/* 参与讨论 */
+/* å‚ä¸Žè®¨è®º */
 .info .user {
   position: absolute;
   top: 7%;
   right: 40%;
 }
 
-/*  参与讨论数 */
+/*  å‚ä¸Žè®¨è®ºæ•° */
 .info .user span {
   color: white;
   position: relative;
@@ -119,30 +113,29 @@
   vertical-align: super;
 }
 
-/*  参与评论 */
+/*  å‚ä¸Žè¯„è®º */
 .info .comment {
   position: absolute;
-  top: 34%;
+  top: 30%;
   right: 36%;
 }
 
-/* 参与评论数 */
+/* å‚ä¸Žè¯„è®ºæ•° */
 .info .comment span {
   color: white;
   font-size: 30px;
   position: relative;
   right: -25%;
-  vertical-align: super;
 }
 
-/* 我的评论 */
+/* æˆ‘çš„è¯„è®º */
 .info .posted {
   position: absolute;
   top: 65%;
   right: 63%;
 }
 
-/* 我的评论数目 */
+/* æˆ‘çš„è¯„è®ºæ•°ç›® */
 .info .posted span {
   color: #079E6E;
   position: relative;
@@ -150,14 +143,14 @@
   vertical-align: super;
 }
 
-/* 我的被赞 */
+/* æˆ‘çš„è¢«èµž */
 .info .like {
   position: absolute;
   top: 64%;
   right: 23%;
 }
 
-/* 我的被赞数目 */
+/* æˆ‘çš„è¢«èµžæ•°ç›® */
 .info .like span {
   color: #079E6E;
   position: relative;
@@ -165,19 +158,18 @@
   vertical-align: super;
 }
 
-/* 五个小图标的出现 */
+/* äº”ä¸ªå°å›¾æ ‡çš„divå‡ºçŽ° */
 .apb:hover ~ #control-ring-container > #control-ring {
     border-radius: 50% 50% 50% 50%;
     width: 200px;
     height: 200px;
-    background-color: rgba(100, 100, 100, 0);
     right: 44%;
     bottom: -3%;
 
     opacity: 1;
 }
 
-/* 五个图标总得属性 */
+/* äº”ä¸ªå›¾æ ‡æ‰€åœ¨divæ€»å¾—å±žæ€§ */
 #control-ring {
   list-style:none;
   padding: 0px;
@@ -185,7 +177,6 @@
   border-radius: 50% 50% 50% 50%;
   width: 25px;
   height: 25px;
-  background-color: rgba(100, 100, 100, 0);
 
   position: absolute;
   right: 50%;
@@ -200,13 +191,13 @@
 
 }
 
-/* 五个图标出现 */
+/* äº”ä¸ªå›¾æ ‡å‡ºçŽ° */
 .apb:hover ~ #control-ring-container > #control-ring > .mask,
 .apb:hover ~ #control-ring-container > #control-ring > .history,
 .apb:hover ~ #control-ring-container > #control-ring > .message,
 .apb:hover ~ #control-ring-container > #control-ring > .setting,
 .apb:hover ~ #control-ring-container > #control-ring > .sign {
-  background-color: rgba(48, 63, 159, 1);
+  background-color: #666666;
   width: 33px;
   height: 33px;
 
@@ -216,7 +207,6 @@
 
 .mask, .history, .message, .setting, .sign {
   border-radius: 50%;
-  background-color: rgba(48, 63, 159, 0);
   width: 33px;
   height: 33px;
 
@@ -227,7 +217,7 @@
   opacity: 0;
 }
 
-/* 蒙版 */
+/* è’™ç‰ˆ */
 .mask {
   background-image: url(assets/images/mask.png);
   position: absolute;
@@ -236,7 +226,7 @@
   bottom: 54%;
 }
 
-/* 历史消息 */
+/* åŽ†å²æ¶ˆæ¯ */
 .history {
   background-image: url(assets/images/history.png);
   position: absolute;
@@ -246,7 +236,7 @@
 
 }
 
-/* 消息 */
+/* æ¶ˆæ¯ */
 .message {
   background-image: url(assets/images/message.png);
   position: absolute;
@@ -255,7 +245,7 @@
   bottom: 18%;
 }
 
-/* 未读消息 */
+/* æœªè¯»æ¶ˆæ¯ */
 .message .unread {
   color: white;
   font-size: x-small;
@@ -265,10 +255,13 @@
   top: -4%;
   border-radius: 50%;
   background-color: red;
-  padding: 5px 5px 1px 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
 }
 
-/* 设置 */
+/* è®¾ç½® */
 .setting {
   background-image: url(assets/images/setting.png);
   position: absolute;
@@ -277,7 +270,7 @@
   bottom: 7%;
 }
 
-/* 登陆 */
+/* ç™»é™† */
 .sign {
   background-image: url(assets/images/signin.png);
   position: absolute;
