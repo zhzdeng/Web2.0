@@ -7,7 +7,7 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   right: 50%;
 
   background-image: url(assets/images/atplus_white.png);
@@ -33,7 +33,7 @@
   visibility: hidden;
 
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   right: 50%;
 
   transition: all 1s linear;
@@ -53,13 +53,13 @@
 .apb:hover .after-icon {
   visibility: visible;
 
-  /* æ‰©å¤§ä¸¤å€ */
+  /* large 2 times */
   transform: scale(2);
 }
 
 
 
-/* å¤§å›¾æ ‡å‡ºçŽ° */
+/* 大图标的动效 */
 .apb:hover ~ #info-bar > .info {
   background-color: #666666;
   width: 128px;
@@ -67,13 +67,13 @@
 
   position: absolute;
   right: 45.7%;
-  bottom: 16%;
+  bottom: 22%;
 
-  /* å‡ºçŽ° */
+  /* 可见 */
   opacity: 1;
 }
 
-/* å¤§å›¾æ ‡é»˜è®¤å±žæ€§ */
+/* 大图标初始化 */
 .info {
   border-radius: 50%;
 
@@ -81,7 +81,7 @@
   width: 25px;
   height: 25px;
   right: 50%;
-  bottom: 10%;
+  bottom: 15%;
 
   transition: all 1s linear;
   -webkit-transition: all 1s linear;
@@ -92,35 +92,34 @@
   overflow: hidden;
 }
 
-/* åŽ»åˆ—è¡¨çš„é»‘ç‚¹ */
+/* 去列表的小黑点 */
 .info ul {
   list-style:none;
 }
 
-/* å‚ä¸Žè®¨è®º */
+/* 讨论 */
 .info .user {
   position: absolute;
   top: 7%;
-  right: 40%;
+ right: 40%;
 }
 
-/*  å‚ä¸Žè®¨è®ºæ•° */
+/* 参与讨论数目 */
 .info .user span {
   color: white;
   position: relative;
   right: -22%;
-  /* top: 5%; */
   vertical-align: super;
 }
 
-/*  å‚ä¸Žè¯„è®º */
+/* 评论 */
 .info .comment {
   position: absolute;
   top: 30%;
   right: 36%;
 }
 
-/* å‚ä¸Žè¯„è®ºæ•° */
+/* 评论数目 */
 .info .comment span {
   color: white;
   font-size: 30px;
@@ -128,14 +127,14 @@
   right: -25%;
 }
 
-/* æˆ‘çš„è¯„è®º */
+/* 我的评论 */
 .info .posted {
   position: absolute;
   top: 65%;
   right: 63%;
 }
 
-/* æˆ‘çš„è¯„è®ºæ•°ç›® */
+/* 我的评论数目 */
 .info .posted span {
   color: #079E6E;
   position: relative;
@@ -143,14 +142,14 @@
   vertical-align: super;
 }
 
-/* æˆ‘çš„è¢«èµž */
+/* 被赞 */
 .info .like {
   position: absolute;
   top: 64%;
   right: 23%;
 }
 
-/* æˆ‘çš„è¢«èµžæ•°ç›® */
+/* 被赞数目 */
 .info .like span {
   color: #079E6E;
   position: relative;
@@ -158,18 +157,18 @@
   vertical-align: super;
 }
 
-/* äº”ä¸ªå°å›¾æ ‡çš„divå‡ºçŽ° */
+/* 五个小图标的动效 */
 .apb:hover ~ #control-ring-container > #control-ring {
     border-radius: 50% 50% 50% 50%;
     width: 200px;
     height: 200px;
     right: 44%;
-    bottom: -3%;
+    bottom: 0%;
 
     opacity: 1;
 }
 
-/* äº”ä¸ªå›¾æ ‡æ‰€åœ¨divæ€»å¾—å±žæ€§ */
+/* 五个图标初始化 */
 #control-ring {
   list-style:none;
   padding: 0px;
@@ -180,7 +179,7 @@
 
   position: absolute;
   right: 50%;
-  bottom: 5%;
+  bottom: 10%;
 
   opacity: 0;
 
@@ -191,7 +190,7 @@
 
 }
 
-/* äº”ä¸ªå›¾æ ‡å‡ºçŽ° */
+/* 每个图标的颜色，大小动效 */
 .apb:hover ~ #control-ring-container > #control-ring > .mask,
 .apb:hover ~ #control-ring-container > #control-ring > .history,
 .apb:hover ~ #control-ring-container > #control-ring > .message,
@@ -217,7 +216,7 @@
   opacity: 0;
 }
 
-/* è’™ç‰ˆ */
+
 .mask {
   background-image: url(assets/images/mask.png);
   position: absolute;
@@ -226,7 +225,7 @@
   bottom: 54%;
 }
 
-/* åŽ†å²æ¶ˆæ¯ */
+
 .history {
   background-image: url(assets/images/history.png);
   position: absolute;
@@ -236,7 +235,7 @@
 
 }
 
-/* æ¶ˆæ¯ */
+
 .message {
   background-image: url(assets/images/message.png);
   position: absolute;
@@ -245,7 +244,7 @@
   bottom: 18%;
 }
 
-/* æœªè¯»æ¶ˆæ¯ */
+
 .message .unread {
   color: white;
   font-size: x-small;
@@ -261,7 +260,7 @@
   text-align: center;
 }
 
-/* è®¾ç½® */
+
 .setting {
   background-image: url(assets/images/setting.png);
   position: absolute;
@@ -270,7 +269,7 @@
   bottom: 7%;
 }
 
-/* ç™»é™† */
+
 .sign {
   background-image: url(assets/images/signin.png);
   position: absolute;
