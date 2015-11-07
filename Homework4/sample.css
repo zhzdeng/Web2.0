@@ -1,9 +1,12 @@
+/* by Zhong Hongzhen */
 * {
   margin: 0px 0px 0px 0px;
 }
+
 body {
-  background-image: url(scare.jpg);
+  background-image: url(img/scare.jpg);
 }
+
 h1 {
   text-align: center;
 
@@ -17,7 +20,7 @@ h1:hover {
 }
 
 #clalculator {
-  background-image: url(background.jpg);
+  background-image: url(img/background.jpg);
   background-size: cover;
   margin-right: auto;
   margin-left: auto;
@@ -39,7 +42,7 @@ h1:hover {
 }
 
 button {
-  background-image: url(button.png);
+  background-image: url(img/button.png);
   background-size: cover;
 
   margin: 6px 10px 6px 35px;
@@ -48,4 +51,5 @@ button {
   border-radius: 50%;
   font-weight: bold;
   font-size: 50px;
+  color: rgb(70, 250, 250);
 }
