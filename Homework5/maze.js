@@ -31,7 +31,7 @@ window.onload = function() {
     if (result[0]&&result[1]) {
       text.textContent = "You Win";
     }
-    else if (result[0]&&!result[1]) {
+    else if (!result[1]) {
       text.textContent = "Don't cheat,you should start form the 's' and move to the 'E' inside the maze!";
     }
     result = [false, false, false];

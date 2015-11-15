@@ -25,7 +25,6 @@ window.onload = function() {
         click = 30;
         scoreText.value = score;
       }
-      // gameArea.className = "playingMouse";
       begin();
       startStatus = false;
     } else {
@@ -44,7 +43,6 @@ window.onload = function() {
 
   function stop() {
     // 暂停函数
-    // gameArea.className = "gameoverMouse";
     palystatus.value = "Game Stop";
     clearInterval(eachClick);
   }
@@ -64,7 +62,7 @@ window.onload = function() {
     // 每秒流逝时间并显示
     timeText.value = click;
     if (click == 0) end();
-    click--;
+    if (click > 0) click--;
   }
 
   function judge(event) {
