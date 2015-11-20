@@ -1,0 +1,167 @@
+/* by Zhong Hongzhen */
+* {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+#gameArea {
+  width: 355px;
+  height: 354px;
+  cursor: pointer;
+  cursor: hand;
+  position: relative;
+}
+
+#restartbox, #restart, #finishbox, #finish, #changeimgbox, #changeimg, #tipbox, #tip {
+  width: 120px;
+  height: 40px;
+}
+
+#restartbox, #finishbox, #changeimgbox, #tipbox {
+  box-shadow: 5px 5px 5px rgb(174, 174, 174);
+}
+
+#restart, #changeimg, #finish, #tip {
+  font-size: larger;
+  color: white;
+  background-color: rgb(90, 134, 240);
+
+}
+
+#changeimgbox {
+  position:relative;
+  top: -80px;
+  left: 150px;
+}
+
+#finishbox {
+  position:relative;
+  top: -40px;
+  left: -150px;
+}
+
+.row1 {
+  top: 0%;
+}
+
+.row2 {
+  top: 25%;
+}
+
+.row3 {
+  top: 50%;
+
+}
+
+.row4 {
+  top: 75%;
+
+}
+
+.column1 {
+  left: 0%;
+
+}
+
+.column2 {
+  left: 25%;
+
+}
+
+.column3 {
+  left: 50%;
+
+}
+
+.column4 {
+  left: 75%;
+
+}
+
+.puzzle {
+  width: 87px;
+  height: 87px;
+  position: absolute;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(174, 174, 174);
+  -webkit-transition-property: left, top;
+  -o-transition-property: left, top;
+  transition-property: left, top;
+
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.puzzle:hover {
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#r1c1, #r1c2, #r1c3, #r1c4 {
+  background-position-y: 0px;
+}
+
+#r2c1, #r2c2, #r2c3, #r2c4 {
+  background-position-y: -88px;
+}
+
+#r3c1, #r3c2, #r3c3, #r3c4 {
+  background-position-y: 176px;
+}
+
+#r4c1, #r4c2, #r4c3, #r4c4 {
+  background-position-y: 88px;
+}
+
+#r1c1, #r2c1, #r3c1, #r4c1 {
+  background-position-x: 0px;
+}
+
+#r1c2, #r2c2, #r3c2, #r4c2 {
+  background-position-x: -88px;
+}
+
+#r1c3, #r2c3, #r3c3, #r4c3 {
+  background-position-x: 176px;
+}
+
+#r1c4, #r2c4, #r3c4, #r4c4 {
+  background-position-x: 88px;
+}
+
+#r4c4 {
+  border-style: none;
+}
+
+.panda {
+  background-image: url(img/panda.jpg);
+}
+
+.spongebob {
+  background-image: url(img/spongebob.jpg);
+}
+
+.minions {
+  background-image: url(img/minions.jpg);
+}
+
+.doraemon {
+  background-image: url(img/doraemon.jpg);
+}
