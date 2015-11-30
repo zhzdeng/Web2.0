@@ -1,0 +1,55 @@
+/* by Zhong Hongzhen */
+* {
+  margin: 0px 0px 0px 0px;
+}
+
+body {
+  background-image: url(img/scare.jpg);
+}
+
+h1 {
+  text-align: center;
+
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+h1:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+}
+
+#clalculator {
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  border-color: blue;
+  border-style: solid;
+}
+
+#output {
+  width: 550px;
+  margin-left: 25px;
+  margin-top: 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: right;
+}
+
+button {
+  background-image: url(img/button.png);
+  background-size: cover;
+
+  margin: 6px 10px 6px 35px;
+  width: 97px;
+  height: 97px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 50px;
+  color: rgb(70, 250, 250);
+}

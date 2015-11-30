@@ -1,0 +1,194 @@
+/* by Zhong Hongzhen*/
+body {
+  font-family: "Century Gothic";
+}
+
+#maze {
+  position: relative;
+  width:500px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.border {
+  background-color: #eeeeee;
+  background-image: url(img/border.png);
+}
+
+#border1 {
+  width: 200px;
+  height: 50px;
+  position:absolute;
+  left: 150px;
+  border-top: thin solid;
+  border-bottom: thin solid;
+}
+
+#border2 {
+  position: absolute;
+  right: 0px;
+  width: 150px;
+  height: 50px;
+  border-top: thin solid;
+  border-right: thin solid;
+}
+
+#border3 {
+  width: 150px;
+  height: 150px;
+  position:absolute;
+  right:0px;
+  top: 51px;
+  border-right: thin solid;
+  border-left: thin solid;
+  border-bottom: thin solid;
+}
+
+#border4 {
+  width: 200px;
+  height: 50px;
+  position:absolute;
+  bottom: 0px;
+  right:0px;
+  border-top: thin solid;
+  border-right: thin solid;
+  border-bottom: thin solid;
+}
+
+#border5 {
+  width: 100px;
+  height: 50px;
+  position:absolute;
+  bottom:0px;
+  left: 200px;
+  border-bottom: thin solid;
+}
+
+#border6 {
+  width: 200px;
+  height: 50px;
+  position:absolute;
+  bottom:0px;
+  left: 0px;
+  border-top: thin solid;
+  border-left: thin solid;
+  border-bottom: thin solid;
+}
+
+#border7 {
+  position:absolute;
+  width: 150px;
+  height: 150px;
+  top: 51px;
+  border-right: thin solid;
+  border-left: thin solid;
+  border-bottom: thin solid;
+}
+
+#border8 {
+  width: 150px;
+  height: 50px;
+  border-top: thin solid;
+  border-left: thin solid;
+}
+
+#border9 {
+  width: 98px;
+  height: 150px;
+  position:absolute;
+  left: 200px;
+  bottom: 51px;
+  border-top: thin solid;
+  border-left: thin solid;
+  border-right: thin solid;
+}
+
+#start, #end {
+  width: 40px;
+  height: 40px;
+  position:absolute;
+  bottom: 54px;
+  text-align: center;
+  font-size: xx-large;
+  border: thin solid;
+}
+
+#judge {
+  background-color: white;
+  width: 40px;
+  height: 46px;
+  position:absolute;
+  left: 230px;
+  top: 52px;
+  /*padding: 0px 0px 0px 0px;*/
+  /*margin: 0px 0px 0px 0px;*/
+}
+
+#start {
+  background-color: #84ff82;
+  background-image: url(img/start.png);
+}
+
+#end {
+  right: 0px;
+  background-image: url(img/end.png);
+}
+
+#title, .text {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 100;
+}
+
+#title {
+  font-weight: 500;
+}
+
+
+/*#result {
+   -webkit-transition: all 0.7s;
+   -o-transition: all 0.7s;
+   transition: all 0.7s;
+}*/
+
+#notice {
+  width: 605px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+#notice div {
+  width: 100px;
+  height: 25px;
+  position:relative;
+  left: 252.1px;
+  border: thin solid;
+  background-color: #eeeeee;
+  background-image: url(img/border.png);
+}
+
+.palygame {
+  cursor: url(img/mouse.png) ,pointer;
+}
+
+.touchborder {
+  background-color: red;
+}
+
+.gameover {
+  cursor: auto;
+}
+
+.textStart {
+  visibility: hidden;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 100;
+}

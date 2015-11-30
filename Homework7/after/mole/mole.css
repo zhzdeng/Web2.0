@@ -1,0 +1,100 @@
+/* by Zhong Hongzhen*/
+body {
+  font-family: "Century Gothic";
+}
+
+.text, #title {
+  text-align: center;
+}
+
+#title {
+  font-weight: 500;
+  font-size: x-large;
+}
+
+div {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+#content {
+  width: 673px;
+  height: 470px;
+  position: relative;
+}
+#time, #score {
+  width: 34px;
+}
+
+#timeDiv {
+  position:absolute;
+  right: 7px;
+  top: 1px;
+  z-index: 2;
+}
+
+#result {
+  position:absolute;
+  left: 0px;
+  top: 25px;
+}
+
+#scoreDiv {
+  position: absolute;
+  right: 7px;
+  top: 25px;
+}
+
+#head {
+  width: 300px;
+  height: 60px;
+  position: relative;
+}
+
+ol {
+  padding-left: 30px;
+}
+
+#instructions {
+  font-weight: bold;
+}
+#gameArea {
+  width: 234px;
+  height: 156px;
+  border-top: thin solid;
+  border-bottom: thin solid;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  cursor: default;
+}
+
+#gameArea button {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 9px 2px 1px 2px;
+  /* margin-top: 4px; */
+  background-color: white;
+  border-style: inherit;
+  outline:none;
+}
+
+.playingMouse {
+  cursor: url(img/playingmouse.png), default;
+}
+
+.gameoverMouse {
+  cursor: auto;
+}
+
+.focus {
+  background-image: url(img/squirrels.png);
+  background-size: cover;
+}
+
+.blur {
+  background-image:;
+}

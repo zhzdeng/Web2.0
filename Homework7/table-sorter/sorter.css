@@ -1,0 +1,45 @@
+body {
+  font-family: "Century Gothic";
+}
+
+table {
+  border-collapse:collapse;
+}
+
+table th {
+  color: white;
+  background-color: rgb(24, 38, 125);
+  padding-right: 20px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+table, td, th {
+  border:1px solid rgb(192, 192, 192);
+}
+
+.alternate {
+  background-color: rgb(211, 211, 211);
+}
+
+.click {
+  background-color: rgb(168, 173, 268);
+}
+
+.descend {
+  background-image: url(descend.png);
+}
+
+.ascend {
+  background-image: url(ascend.png);
+}
+
+.ascend, .descend {
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
