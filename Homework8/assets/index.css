@@ -1,0 +1,51 @@
+body {
+  font-family: "Century Gothic";
+}
+
+h2, form {
+  text-align: center;
+}
+
+label input {
+  margin-bottom: 2px;
+  border-width: 1px 1px 1px 1px;
+}
+
+#submit {
+  position: relative;
+  left: 35px;
+}
+
+#reset {
+  position: relative;
+  left: 25px;
+}
+
+.error {
+  background-color: rgb(243, 225, 225);
+  border-color: rgb(184,75,75);
+  border-style: solid;
+  border-width: thin;
+}
+
+.corrent {
+  background-color: rgb(200, 230, 200);
+  border-color: rgb(76,180,76);
+  border-style: solid;
+  border-width: thin;
+}
+
+#notice p {
+  text-align: center;
+}
+
+#block {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+#login, #registered {
+  position: relative;
+  left: 45px;
+}

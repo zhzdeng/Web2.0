@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="index.css" />
+  <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+  <h2>用户登录</h2>
+  <form action="http://127.0.0.1:8000/" method="get">
+    <label><input type="text" name='username' /></label>
+    <input type="reset" id="reset" value="重置" />
+    <input type="submit" id="submit" value="提交" />
+    <input id='registered' type='button' value="用户注册" onclick="location.href='http://localhost:8000/'"/>
+  </form>
+  <br />
+  <div id="notice" class="notice">
+    <p></p>
+  </div>
+</body>
+  <script type="text/javascript" src='index.js'></script>
+</html>
