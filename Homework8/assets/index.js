@@ -7,7 +7,10 @@ $(function() {
 $("label input").blur(function(event) {
   var target = event.target;
   var name = $(target).attr('name');
-  if (regJudge(name, $(target).val())) $(target).attr('class', 'corrent');
+  if (regJudge(name, $(target).val())) {
+    $(target).attr('class', 'corrent');
+    $('#notice p').html('');
+  }
   else {
     $(target).attr('class', 'error');
     displayError(name);
