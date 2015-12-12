@@ -1,0 +1,390 @@
+/* by Zhong Hongzhen */
+
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: "Century Gothic";
+}
+
+.info p {
+  text-align: center;
+  position: relative;
+  bottom: 76px;
+  font-size: xx-large;
+  color: rgb(82, 82, 82);
+  display: inline;
+
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+}
+
+
+#bottom-positioner {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-color: red;
+  border-width: medium;
+  width: 205px;
+  height: 700px;
+}
+
+/* #button {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-color: red;
+  border-width: medium;
+  width: 200px;
+  height: 1000px;
+} */
+
+/* at-plus-white */
+.icon {
+  background-color: rgba(48, 63, 159, 0.5);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 150px;
+  right: 88px;
+
+  background-image: url(assets/images/atplus_white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px, 20px;
+
+
+}
+
+
+/* at-plus-green */
+.after-icon {
+  background-color: rgba(48, 63, 159, 1);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-image: url(assets/images/atplus_green.png);
+  background-repeat: no-repeat;
+  background-size: 20px, 20px;
+  background-position: center;
+
+  visibility: hidden;
+
+  position: absolute;
+  bottom: 150px;
+  right: 88px;
+  transition-property: width,height,bottom,right,transform,visibility;
+  -moz-transition-property: width,height,bottom,right,transform,visibility; /* Firefox 4 */
+  -webkit-transition-property:width,height,bottom,right,transform,visibility; /* Safari 和 Chrome */
+  -o-transition-property:width,height,bottom,right,transform,visibility; /* Opera */
+
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s; /* Firefox 4 */
+  -webkit-transition-duration: 0.4s; /* Safari 和 Chrome */
+  -o-transition-duration: 0.4s; /* Opera */
+
+  transition-delay: 0.8s;
+  -moz-transition-delay: 0.8s; /* Firefox 4 */
+  -webkit-transition-delay: 0.8s; /* Safari 和 Chrome */
+  -o-transition-delay: 0.8s; /* Opera */
+}
+
+
+/* at-plus-white disappear */
+#button:hover .icon {
+  background-color: rgba(48, 63, 159, 0);
+  transition-delay: 0s;
+}
+
+/* at-plus-green appear */
+#button:hover .after-icon {
+  visibility: visible;
+
+  /* large 2 times */
+  transform: scale(2);
+  transition-delay: 0s;
+
+}
+
+.sum {
+  font-size: xx-large;
+  color: rgb(102, 229, 144);
+  position: relative;
+  right: -7px;
+  bottom: 5px;
+}
+
+/* 大图标的动效 */
+#button:hover  #info-bar > .info {
+  width: 128px;
+  height: 128px;
+
+  position: absolute;
+  right: 32px;
+  bottom: 208px;
+
+  /* 可见 */
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* 大图标初始化 */
+.info {
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 88px;
+  bottom: 150px;
+
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+
+  transition-delay: 0.4s;
+  opacity: 0;
+  /*overflow: hidden;*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* 去列表的小黑点 */
+.info ul {
+  list-style:none;
+}
+
+/* 讨论 */
+.info .user {
+  position: absolute;
+  top: 7%;
+ right: 40%;
+  font-weight: bold;
+}
+
+/* 参与讨论数目 */
+.info .user span {
+  color: white;
+  position: relative;
+  right: -22%;
+  vertical-align: super;
+}
+
+/* 评论 */
+.info .comment {
+  position: absolute;
+  top: 30%;
+  right: 36%;
+  font-weight: bold;
+}
+
+/* 评论数目 */
+.info .comment span {
+  color: white;
+  font-size: 30px;
+  position: relative;
+  right: -25%;
+}
+
+/* 我的评论 */
+.info .posted {
+  position: absolute;
+  top: 65%;
+  right: 63%;
+}
+
+/* 我的评论数目 */
+.info .posted span {
+  color: rgb(150, 218, 158);
+  position: relative;
+  right: -24%;
+  vertical-align: super;
+  font-weight: bold;
+}
+
+/* 被赞 */
+.info .like {
+  position: absolute;
+  top: 64%;
+  right: 23%;
+}
+
+#info-bar > p {
+  text-align: center;
+  position: relative;
+  bottom: -230px;
+  right: -9px;
+}
+
+/* 被赞数目 */
+.info .like span {
+  color: rgb(150, 218, 158);
+  position: relative;
+  right: -24%;
+  vertical-align: super;
+  font-weight: bold;
+}
+
+/* 五个小图标的动效 */
+#button:hover #control-ring-container > #control-ring {
+    border-radius: 50% 50% 50% 50%;
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    bottom: 75px;
+
+    opacity: 1;
+  transition-delay: 0s;
+    margin: 0px 0px 0px 0px;
+}
+
+/* 五个图标初始化 */
+#control-ring {
+  list-style:none;
+  padding: 0px;
+
+  border-radius: 50% 50% 50% 50%;
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  right: 81px;
+  bottom: 150px;
+
+  opacity: 0;
+
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+
+  transition-delay: 0.4s;
+
+  margin: 0px 0px 0px 0px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* 每个图标的颜色，大小动效 */
+#button:hover .mask,
+#button:hover .history,
+#button:hover .message,
+#button:hover .setting,
+#button:hover .sign {
+  width: 33px;
+  height: 33px;
+
+  opacity: 1;
+
+  transition-delay: 0s;
+
+}
+
+
+ul li p {
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.mask, .history, .message, .setting, .sign {
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px, 20px;
+  transition: all 0.4s linear 0.4s;
+  opacity: 0;
+}
+
+
+.mask {
+  /*background-image: url(assets/images/mask.png);*/
+  position: absolute;
+
+  right: 67%;
+  bottom: 54%;
+}
+
+
+.history {
+  /*background-image: url(assets/images/history.png);*/
+  position: absolute;
+
+  right: 71%;
+  bottom: 36%;
+
+}
+
+
+.message {
+  /*background-image: url(assets/images/message.png);*/
+  position: absolute;
+
+  right: 64%;
+  bottom: 18%;
+}
+
+
+.unread {
+  color: white;
+  font-size: x-small;
+  vertical-align: middle;
+  position: absolute;
+  right: -4px;
+  top: 0px;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+
+
+.setting {
+  /*background-image: url(assets/images/setting.png);*/
+  position: absolute;
+
+  right: 48%;
+  bottom: 7%;
+}
+
+
+.sign {
+  /*background-image: url(assets/images/signin.png);*/
+  position: absolute;
+
+  right: 27%;
+  bottom: 9%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.display {
+  visibility: visible;
+}
+
+.active {
+  background-color: rgb(25, 52, 141);
+  color: rgb(102, 229, 144);
+}
+
+.disable {
+  background-color: rgb(82, 82, 82);
+  color: rgb(255, 251, 240);
+}

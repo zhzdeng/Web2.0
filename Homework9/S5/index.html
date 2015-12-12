@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>环形按钮</title>
+    <meta charset="utf-8">
+    <link rel="icon" sizes="196x196" href="assets/images/favicon.png">
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="transition.css">
+  </head>
+  <body>
+    <div id="at-plus-container">
+      <div id="bottom-positioner">
+        <div id="button">
+          <div id="info-bar">
+              <p class='hidden'>.....</p>
+            <div style="display:block" class="info disable">
+              <p></p>
+              <ul>
+                <span class="sum">3</span>
+              </ul>
+            </div>
+          </div>
+          <div id="control-ring-container">
+            <ul id="control-ring">
+              <li title="蒙板" class="mask button active"><p>A</p><span class="unread hidden"></span></li>
+              <li title="历史记录" class="history button active"><p>B</p><span class="unread hidden"></span></li>
+              <li title="消息" class="message button active"><p>C</p><span class="unread hidden"></span></li>
+              <li title="设置" class="setting button active"><p>D</p><span class="unread hidden"></span></li>
+              <li title="登录/注册" class="sign button active"><p>E</p><span class="unread hidden"></span></li>
+            </ul>
+          </div>
+          <div class="apb">
+            <div class="icon"></div>
+            <div class="after-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src='index.js'></script>
+</html>
