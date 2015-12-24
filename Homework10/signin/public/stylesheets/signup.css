@@ -1,0 +1,150 @@
+* {
+  font-family: "Century Gothic";
+}
+
+body {
+  background-image: url(../images/signup.gif);
+  background-size: cover;
+}
+
+h1, form {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#block {
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  height: 500px;
+  border-style: outset;
+  font-size: 2em;
+  position: relative;
+  border-width: thin;
+}
+
+label input {
+  width: 300px;
+  height: 30px;
+  background: rgba(61, 176, 262, 0.15);
+  /*   opacity: 0.2;   */
+}
+
+label {
+  position: absolute;
+  font-size: x-large;
+  right: 50px;
+}
+
+#lusername {
+  top: 15px;
+}
+
+#lpassword {
+  top: 80px;
+}
+
+#lpasswordagain {
+  top: 145px;
+}
+
+#lsid {
+  top: 210px;
+}
+#lphone {
+  top: 275px;
+}
+
+#lemail {
+  top: 340px;
+}
+
+#lcheck {
+  top: 405px;
+  left: -170px
+}
+#lcheck input {
+  width: 80px;
+}
+form > input {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  position: relative;
+  top: 170px;
+  margin: 5px;
+}
+
+#error {
+  color: rgb(239, 161, 134);
+  /* border-style: solid; */
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 503px;
+  top: -322px;
+  /* border-style: solid; */
+}
+
+#errorpassword {
+  position: relative;
+  top: 30px;
+}
+
+#errorpasswordagain {
+  position: relative;
+  top: 40px;
+}
+
+#errorsid {
+  position: relative;
+  top: 60px;
+}
+
+#errorphone {
+  position: relative;
+  top: 80px;
+}
+
+#erroremail {
+  position: relative;
+  top: 100px;
+}
+
+#errorcheck {
+  position: relative;
+  top: 120px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+
+.corrent {
+  background-color: rgb(200, 230, 200);
+  border-color: rgb(32,94,158);
+  border-style: solid;
+  border-width: thin;
+}
+
+p {
+  /* margin-top: 0px; */
+  font-size: 60%;
+}

@@ -1,0 +1,103 @@
+* {
+  font-family: "Century Gothic";
+}
+
+body {
+  background-image: url(../images/signin.jpg);
+  background-size: cover;
+}
+
+h1, form {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#block {
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  height: 500px;
+  border-style: outset;
+  font-size: 2em;
+  position: relative;
+  border-width: thin;
+}
+
+label input {
+  width: 300px;
+  height: 30px;
+  background: rgba(61, 176, 262, 0.15);
+  /*   opacity: 0.2;   */
+}
+
+
+#lusername {
+  position: absolute;
+  left: 35px;
+  top: 79px;
+}
+
+#lpassword {
+  position: absolute;
+  left: 65px;
+  top: 158px;
+}
+
+form > input {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+#signup {
+  /* opacity: 0.5; */
+  position: absolute;
+  left: 172px;
+  bottom: 119px;
+}
+#submit {
+  position: absolute;
+  left: 300px;
+  bottom: 119px;
+}
+
+#lcheck {
+  position: absolute;
+  left: 114px;
+  top: 238px;
+  font-size: xx-small;
+}
+
+#check {
+  width:70px;
+  height: 20px
+}
+
+#error {
+  color: rgb(239, 161, 134);
+  border-style: solid;
+  font-size: 0.8em;
+  width: 500px;
+  height: 100px;
+  position: relative;
+  top: 400px;
+  border-width: thin;
+}
+
+#error p {
+  text-align: center;
+}

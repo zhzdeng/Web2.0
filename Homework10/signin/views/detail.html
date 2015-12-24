@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户详情</title>
+  <link rel="stylesheet" href="../public/stylesheets/detail.css" />
+</head>
+<body>
+  <h1>用户详情</h1>
+  <div id="block">
+    <p id='username'>.</p>
+    <p id='sid'>.</p>
+    <p id='phone'>.</p>
+    <p id='email'>.</p>
+    <button id="quit" name='quit'>登出</button>
+    <button id="changepassword" name='changepassword'>修改密码</button>
+  </div>
+  <div id="changepswordblock">
+    <form method='post'>
+      <label id="loldpassword">原密码：<input type="password" name='oldpassword' /></label>
+      <label id="lnewpassword">新密码：<input type="password" name='newpassword' /></label>
+      <label id="lpasswordagain">确认密码：<input type="password" name='passwordagain' /></label>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+  title 登录
+  script(type='text/javascript' src='public/javascripts/jquery.js')
+  script(type='text/javascript' src='public/javascripts/jquery.cookie.js')
+  script(type='text/javascript' src='public/javascripts/signin.js')
+  link(rel='stylesheet', type='text/css', href='public/stylesheets/signin.css')
+  body
+    h1 用户登录
+    div#block
+      form(action='/')
+        label#lusername 用户名：
+          input#username(name='username')
+          br
+
+        label#lpassword 密码：
+          input#password(name='password', type='password')
+          br
+
+        label#lcheck 验证码：
+          input#check(name='check')
+          br
+        input#signup(type='button', value="注册")
+        input#submit(type='submit', value='登录')
+      div#error
+        p
+
