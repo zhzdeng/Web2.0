@@ -10,7 +10,7 @@ $(function() {
 function check() {
   self = this;
   if (self.name === 'passwordagain') {
-    if (!validator.isPasswordValid($('#password').val(), $('#passwordagain').val()))
+    if (!validator.isPasswordagainValid($('#password').val(), $('#passwordagain').val()))
       showError('passwordagain', '两次密码不相同');
     else hidden($('#errorpasswordagain'));
   } else {
@@ -35,7 +35,7 @@ function check() {
 }
 
 function submit(event) {
-  $('#username, #passwordagain, #sid, #phone, #email').blur();
+  $('#username, #passwordagain, #sid, #phone, #email, #password').blur();
   if (!validator.isFormValid()) event.preventDefault();
 }
 

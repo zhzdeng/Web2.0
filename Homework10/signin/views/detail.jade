@@ -1,20 +1,12 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title  用户详情
-    link(rel='stylesheet', type='text/css', href='public/stylesheets/detail.css')
-    script(type='text/javascript' src='public/javascripts/jquery.js')
-    script(type='text/javascript' src='public/javascripts/validator.js')
-    script(type='text/javascript' src='public/javascripts/jquery.cookie.js')
-    script(type='text/javascript' src='public/javascripts/detail.js')
-  body
+extends layout
+
+block content
     h1 用户详情
     div#block
-      p#username .
-      p#sid .
-      p#phone .
-      p#email .
+      p#username 姓名：#{user.username}
+      p#sid 学号：#{user.sid}
+      p#phone 电话：#{user.phone}
+      p#email 邮箱：#{user.email}
       button#quit(name='quit') 登出
       button#changepassword(name='changepassword') 修改密码
     div#changepasswordblock.hidden
@@ -26,4 +18,7 @@ html
         label#lpasswordagain 确认密码：
           input(type='password', name='passwordagain')
         input#submit(type='button', value='修改')
-  p.hidden 两次密码不一致
+    p.hidden 两次密码不一致
+    link(rel='stylesheet', type='text/css', href='stylesheets/detail.css')
+    script(type='text/javascript' src='javascripts/validator.js')
+    script(type='text/javascript' src='javascripts/detail.js')

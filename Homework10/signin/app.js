@@ -5,7 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
-
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 
 var apiRouter = require('./routes/apiRouter');
 var getRouter = require('./routes/getRouter');
@@ -24,7 +25,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({
+  store: new FileStore(),
+  secret: 'modern web programming',
+  resave: false,
+  saveUninitialized: false
+}))
 app.use('/api', apiRouter);
 app.use('/', getRouter);
 

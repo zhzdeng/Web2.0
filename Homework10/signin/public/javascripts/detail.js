@@ -5,8 +5,7 @@ $(function() {
 });
 
 function quit() {
-  $.cookie('userId', null);
-  window.location.href = "/";
+  window.location.href = "/signout";
 }
 
 function changepassword() {

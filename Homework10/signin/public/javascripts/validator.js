@@ -53,7 +53,7 @@ var validator = {
   },
 
   isPasswordValid: function(password) {
-    return this.form.password.status = /^[a-zA-Z0-9-\-]{6,12}$/.test(username);
+    return this.form.password.status = /^[a-zA-Z0-9-\-]{6,12}$/.test(password);
   },
 
   isPasswordagainValid: function(password, passwordagain) {

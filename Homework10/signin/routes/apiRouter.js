@@ -1,65 +1,31 @@
 var express = require('express');
 var router = express.Router();
 
-router.post('/api/validate-unique', function(req, res) {
-  var chunk = '';
-  req.on('data', function (temp) {
-    chunk += temp;
-  });
-  req.on('end', function() {
-    var params = chunk.toString().match(/field=(.+)&value=(.+)/);
-    var user = {};
-    user[field = params[1]] = decodeURIComponent(params[2]);
-    // 从数据库中查找数据 user
-
-    var result = {isUnique: true};
-    res.writeHead(200, {"Content-Type": "application/json"})
-    res.end(JSON.stringify(result));
-  });
+// 唯一性校验
+router.post('/validate-unique', function(req, res) {
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.end(JSON.stringify({isUnique: true}));
 });
 
-router.post('/api/changepassword', function(req, res) {
-  var chunk = '';
-  req.on('data', function(temp) {
-    chunk += temp;
-  });
-  req.on('end', function() {
-    // 不确定
-    var params = chunk.toString().match(/old=(.+)&new=(.+)/);
-    // 通过cookie找到用户，并比对原密码，修改新密码
-    passwordObject = {oldpassword: parames[1], newpassword: decodeURIComponent(params[2])};
-  });
+// 改密码
+router.post('/changepassword', function(req, res) {
+
 });
 
-router.post('/api/regist', function(req, res) {
-  var chunk = '';
-  req.on('data', function(temp) {
-    chunk += temp;
-  });
-  req.on('end', function() {
-    try {
-      var user = parseUser(chunk.toString());
-      checkUser(user);
-      users[user.username] = user;
-      res.writeHead(301, {Location: '?username=' + user.username});
-      // 派一个cookie给它
-      res.cookie();
-      res.end();
-    } catch (error) {
-
-    }
-  });
+// 注册表单提交
+router.post('/regist', function(req, res) {
+  var user = req.body;
+  req.session.user = user;
+  res.redirect('/detail');
 });
 
-function parseUser(message){
-  params = message.match(/username=(.+)&password=(.+)&passwordagain=(.+)&sid=(.+)&phone=(.+)&email=(.+)/);
-  var user = {username: params[1], password: params[2], passwordagain: params[3], sid: params[4], phone: params[5], email: decodeURIComponent(params[6])};
-  console.log("user parsed is: ", user);
-  return user;
-}
-
-function checkUser(user) {
-  throw new Error();
-}
+// 登录表单提交
+router.post('/signin', function(req, res) {
+  var user = req.body;
+  console.log(req.session);
+  if (req.session.user&&user.username == req.session.user.username&&user.password == req.session.user.password)
+      res.redirect('/detail');
+  else res.redirect('/');
+});
 
 module.exports = router;

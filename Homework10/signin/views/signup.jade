@@ -1,14 +1,6 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title 用户注册
-    script(type='text/javascript' src='public/javascripts/jquery.js')
-    script(type='text/javascript' src='public/javascripts/validator.js')
-    script(type='text/javascript' src='public/javascripts/jquery.cookie.js')
-    script(type='text/javascript' src='public/javascripts/signup.js')
-    link(rel='stylesheet', type='text/css', href='public/stylesheets/signup.css')
-  body
+extends layout
+
+block content
     h1 用户注册
     div#block
       form(action='/api/regist', method='post')
@@ -19,7 +11,7 @@ html
           input#password(name='password', type='password')
         br
         label#lpasswordagain 确认密码：
-          input#passwordagain(name='passwordagain', type='passwordagain')
+          input#passwordagain(name='passwordagain', type='password')
         br
         label#lsid 学号：
           input#sid(name='sid')
@@ -38,8 +30,12 @@ html
         input#login(type='button', value='登录')
       div#error.hidden
         p#errorusername 6~18位英文字母、数字或下划线，必须以英文字母开头
-        p#errorpassword 两次密码不相同
+        p#errorpassword 密码为6~12位数字、大小写字母、中划线、下划线
+        p#errorpasswordagain 两次密码不相同
         p#errorsid 8位数字，不能以0开头
         p#errorphone 11位数字，不能以0开头
         p#erroremail 请输入合法邮箱
         p#errorcheck 验证码不正确
+      script(type='text/javascript' src='javascripts/validator.js')
+      script(type='text/javascript' src='javascripts/signup.js')
+      link(rel='stylesheet', type='text/css', href='stylesheets/signup.css')
