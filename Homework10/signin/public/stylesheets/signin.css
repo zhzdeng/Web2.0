@@ -89,17 +89,16 @@ form > input {
 
 #error {
   color: rgb(239, 161, 134);
-  border-style: solid;
+  /* border-style: solid; */
   font-size: 0.8em;
   width: 500px;
   height: 100px;
   position: relative;
   top: 400px;
-
   transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear; /* Firefox 4 */
-  -webkit-transition: all 0.5s linear; /* Safari 和 Chrome */
-  -o-transition: all 0.5s linear; /* Opera */
+  -moz-transition: all 0.5s linear;/* Firefox 4 */
+  -webkit-transition: all 0.5s linear;/* Safari 和 Chrome */
+  -o-transition: all 0.5s linear;/* Opera */
 }
 
 #error p {

@@ -3,9 +3,9 @@ extends layout
 block content
     h1 用户注册
     div#block
-      form(action='/api/regist', method='post')
+      form(action='/regist', method='post')
         label#lusername 姓名：
-          input#username(name='username')
+          input#username(name='username', value=user.username)
         br
         label#lpassword 密码：
           input#password(name='password', type='password')
@@ -14,13 +14,13 @@ block content
           input#passwordagain(name='passwordagain', type='password')
         br
         label#lsid 学号：
-          input#sid(name='sid')
+          input#sid(name='sid', value=user.sid)
         br
         label#lphone 电话：
-          input#phone(name='phone')
+          input#phone(name='phone', value=user.phone)
         br
         label#lemail 邮箱：
-          input#email(name='email')
+          input#email(name='email', value=user.email)
         br
         label#lcheck 验证码：
           input#check(name='check')

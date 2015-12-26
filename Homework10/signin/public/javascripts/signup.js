@@ -35,7 +35,7 @@ function check() {
 }
 
 function submit(event) {
-  $('#username, #passwordagain, #sid, #phone, #email, #password').blur();
+  // $('#username, #passwordagain, #sid, #phone, #email, #password').blur();
   if (!validator.isFormValid()) event.preventDefault();
 }
 

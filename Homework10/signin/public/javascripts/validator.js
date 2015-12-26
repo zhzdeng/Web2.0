@@ -26,6 +26,16 @@ var validator = {
     }
   },
 
+  findFormatErrors: function (user) {
+    var errorMessages = [];
+    for (var key in user) {
+      if (user.hasOwnProperty(key)&&key !== 'passwordagain'&&key !== 'check') {
+        if (!validator.isFieldValid(key, user[key])) errorMessages.push(validator.form[key].errorMessage);
+      }
+    }
+    errorMessages.length > 0 ? new Error(errorMessages.join('<br />')) : null;
+  },
+
   isUsernameValid: function (username){
     return this.form.username.status = /^[a-zA-Z][a-zA-Z0-9_]{6,18}$/.test(username);
   },
@@ -72,7 +82,7 @@ var validator = {
     }
     return true;
   }
-}
+};
 
 if (typeof module == 'object') { // 服务端共享
   module.exports = validator;

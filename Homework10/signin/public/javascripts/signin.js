@@ -1,6 +1,8 @@
 $(function() {
   // $('#error').removeClass('show').addClass('hidden');
-  $('#error').hide();
+  setTimeout(function() {
+    $('#error').hide();
+  }, 1500);
   $('#submit').click(function(event) {
     if ($('#username').val() === '') showError("用户名不能为空"), event.preventDefault();
     else if ($('#password').val() === '') showError('密码不能为空'), event.preventDefault();
@@ -17,6 +19,6 @@ function showError(message) {
   setTimeout(function(){
     // $('#error').removeClass('show').addClass('hidden');
     $('#error').hide();
-  }, 1000);
+  }, 1500);
 }
 

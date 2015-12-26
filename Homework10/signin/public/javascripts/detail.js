@@ -2,6 +2,18 @@ $(function() {
   $('#changepassword').click(changepassword);
   $('#submit').click(check);
   $('#quit').click(quit);
+  $('#lnewpassword input').blur(function () {
+    if (!validator.isPasswordValid($(this).val()))
+      tempshow($('body > p').text('密码为6~12位数字、大小写字母、中划线、下划线'));
+
+  });
+  $('#lpasswordagain input').blur(function () {
+    if ($('#lpasswordagain input').val() != $('#lnewpassword input').val())
+      tempshow($('body > p').text('两次密码不一致'));
+  });
+  setTimeout(function() {
+    hidden($('#error'));
+  }, 1300);
 });
 
 function quit() {
@@ -20,18 +32,17 @@ function changepassword() {
 }
 
 function check(event) {
-  if ($('#lpasswordagain input').val() != $('#lnewpassword input').val()) {
+  if ($('#lpasswordagain input').val() != $('#lnewpassword input').val()||!validator.isPasswordValid($('#lnewpassword input').val())) {
     event.preventDefault();
-    tempshow($('body > p'));
   } else {
-    $('input:not(#submit)').val('');
-    $.post('/api/changepassword', {oldpassword: $('loldpassword input').val(), newpassword: $('lnewpassword input').val()}, function(data) {
+    $.post('/api/changepassword', {oldpassword: $('#loldpassword input').val(), newpassword: $('#lnewpassword input').val()}, function(data) {
       if (data.status === true) {
         tempshow($('body > p').text('修改成功'));
       } else {
         tempshow($('body > p').text('修改失败，原密码错误'));
       }
     });
+    $('input:not(#submit)').val('');
   }
 }
 
