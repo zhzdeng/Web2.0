@@ -5,6 +5,13 @@ $(function() {
   $('#login').click(function() {
     window.location.href = "/";
   });
+  display($('#errorcheck'));
+  setTimeout(function() {
+    hidden($('#errorcheck'));
+  }, 1500);
+  $('#checkimg').click(function(event) {
+    $(this).attr('src', '/api/getcap?'+Math.random());
+  });
 });
 
 function check() {

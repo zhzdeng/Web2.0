@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var debug = require('debug')('signin:router');
-
+var ccap = require('ccap')();
 module.exports = function (db) {
   var userManager = require('../myModels/userManager')(db);
 
@@ -33,7 +33,15 @@ module.exports = function (db) {
       });
   });
 
-
+  // 请求验证码
+  router.get('/getcap', function (req, res) {
+    var ary = ccap.get();
+    var txt = ary[0];
+    var buf = ary[1];
+    debug('验证码为：', txt);
+    req.session.check = txt;
+    res.end(buf);
+  });
 
   return router;
 };

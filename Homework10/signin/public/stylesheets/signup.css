@@ -148,3 +148,15 @@ p {
   /* margin-top: 0px; */
   font-size: 60%;
 }
+
+input {
+  font-weight: bold;
+  font-size: 80%;
+}
+
+#checkimg {
+  position: absolute;
+  top: 390px;
+  right: 3px;
+  cursor:pointer;
+}

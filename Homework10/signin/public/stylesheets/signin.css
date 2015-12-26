@@ -77,14 +77,14 @@ form > input {
 
 #lcheck {
   position: absolute;
-  left: 114px;
+  left: 64px;
   top: 238px;
-  font-size: xx-small;
+  font-size: x-large;
 }
 
 #check {
-  width:70px;
-  height: 20px
+  width:70px;/* height: 20px
+ */
 }
 
 #error {
@@ -111,3 +111,16 @@ form > input {
 .show {
   visibility: visible;
 }
+
+#checkimg {
+  position: absolute;
+  top: 220px;
+  right: 3px;
+  cursor:pointer;
+}
+
+input {
+  font-weight: bold;
+  font-size: 80%;
+}
+

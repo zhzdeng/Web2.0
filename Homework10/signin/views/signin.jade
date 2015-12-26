@@ -5,15 +5,17 @@ block content
     div#block
       form(action='signin', method='post')
         label#lusername 用户名：
-          input#username(name='username')
+          input#username(name='username', maxlength=18)
           br
 
         label#lpassword 密码：
-          input#password(name='password', type='password')
+          input#password(name='password', type='password', maxlength=12)
           br
 
         label#lcheck 验证码：
-          input#check(name='check')
+          input#check(name='check', maxlength=6)
+        span
+          img#checkimg(src='/api/getcap', alt='验证码')
           br
         input#signup(type='button', value="注册")
         input#submit(type='submit', value='登录')

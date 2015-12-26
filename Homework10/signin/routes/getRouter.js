@@ -9,6 +9,10 @@ module.exports = function (db) {
 
   // 登录表单提交
   router.post('/signin', function(req, res) {
+    if (req.body.check.toLocaleUpperCase() != req.session.check) {
+        res.render('signin', {title: '登录', error: '验证码错误'});
+        return;
+    }
     userManager.findUser(req.body.username, req.body.password)
       .then(function (user) {
         req.session.user = user;
@@ -22,6 +26,10 @@ module.exports = function (db) {
 
   // 注册表单提交
   router.post('/regist', function(req, res) {
+    if (req.body.check.toLocaleUpperCase() != req.session.check) {
+        res.render('signup', {title: '登录', error: '验证码错误', user: req.body});
+        return;
+    }
     var user = req.body;
     userManager.checkUser(user)
       .then(function (user) { userManager.createUser(user); })
@@ -30,7 +38,7 @@ module.exports = function (db) {
         res.redirect('/detail');
       })
       .catch(function (error) {
-        res.render('signup', {title: '注册', user: req.body});
+        res.render('signup', {title: '注册', user: req.body, error: ''});
       });
 
   });
@@ -47,7 +55,7 @@ module.exports = function (db) {
 
   // 返回静态注册页面
   router.get('/regist', function (req, res) {
-    res.render('signup', {title: '注册', user: {}});
+    res.render('signup', {title: '注册', user: {}, error: ''});
   });
 
   // 退出登录
@@ -63,6 +71,7 @@ module.exports = function (db) {
 
   // 返回用户详情
   router.get('/detail', function (req, res) {
+    req.session.cookie.maxAge = 1000 * 60 * 60 * 24; // 保存一天
     res.render('detail', {title: '详情', user: req.session.user, error: errorMessage});
   });
 

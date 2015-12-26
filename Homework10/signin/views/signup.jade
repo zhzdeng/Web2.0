@@ -5,25 +5,27 @@ block content
     div#block
       form(action='/regist', method='post')
         label#lusername 姓名：
-          input#username(name='username', value=user.username)
+          input#username(name='username', value=user.username, maxlength=18)
         br
         label#lpassword 密码：
-          input#password(name='password', type='password')
+          input#password(name='password', type='password', maxlength=12)
         br
         label#lpasswordagain 确认密码：
-          input#passwordagain(name='passwordagain', type='password')
+          input#passwordagain(name='passwordagain', type='password', maxlength=12)
         br
         label#lsid 学号：
-          input#sid(name='sid', value=user.sid)
+          input#sid(name='sid', value=user.sid, maxlength=8)
         br
         label#lphone 电话：
-          input#phone(name='phone', value=user.phone)
+          input#phone(name='phone', value=user.phone, maxlength=11)
         br
         label#lemail 邮箱：
           input#email(name='email', value=user.email)
         br
         label#lcheck 验证码：
-          input#check(name='check')
+          input#check(name='check', maxlength=6)
+        span
+          img#checkimg(src='/api/getcap', alt='验证码')
         br
         input#reset(type='reset', value='重置')
         input#submit(type='submit', value='提交')
@@ -35,7 +37,7 @@ block content
         p#errorsid 8位数字，不能以0开头
         p#errorphone 11位数字，不能以0开头
         p#erroremail 请输入合法邮箱
-        p#errorcheck 验证码不正确
+        p#errorcheck #{error}
       script(type='text/javascript' src='javascripts/validator.js')
       script(type='text/javascript' src='javascripts/signup.js')
       link(rel='stylesheet', type='text/css', href='stylesheets/signup.css')

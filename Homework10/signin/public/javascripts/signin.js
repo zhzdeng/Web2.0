@@ -10,6 +10,9 @@ $(function() {
   $('#signup').click(function() {
     window.location.href = "/regist";
   });
+  $('#checkimg').click(function(event) {
+    $(this).attr('src', '/api/getcap?'+Math.random());
+  });
 });
 
 
